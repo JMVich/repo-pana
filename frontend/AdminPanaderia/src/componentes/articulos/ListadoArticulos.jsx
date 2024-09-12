@@ -120,25 +120,25 @@ const ListadoDeArticulos = () => {
           <table className="min-w-full bg-white border-collapse">
             <thead>
               <tr>
-                <th className="px-6 py-3 border-b-2 border-gray-300 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
+                <th className="px-6 py-3 border-b-2 border-gray-300 bg-gray-50 text-left font-bold leading-4 tracking-wider">
                   Código
                 </th>
-                <th className="px-6 py-3 border-b-2 border-gray-300 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
+                <th className="px-6 py-3 border-b-2 border-gray-300 bg-gray-50 text-left font-bold leading-4 tracking-wider">
                   Nombre
                 </th>
-                <th className="px-6 py-3 border-b-2 border-gray-300 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
+                <th className="px-6 py-3 border-b-2 border-gray-300 bg-gray-50 text-left font-bold leading-4 tracking-wider">
                   Unidad
                 </th>
-                <th className="px-6 py-3 border-b-2 border-gray-300 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
+                <th className="px-6 py-3 border-b-2 border-gray-300 bg-gray-50 text-left font-bold leading-4 tracking-wider">
                   Precio Mostrador
                 </th>
-                <th className="px-6 py-3 border-b-2 border-gray-300 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
+                <th className="px-6 py-3 border-b-2 border-gray-300 bg-gray-50 text-left font-bold leading-4 tracking-wider">
                   Lugar Preparación
                 </th>
-                <th className="px-6 py-3 border-b-2 border-gray-300 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
+                <th className="px-6 py-3 border-b-2 border-gray-300 bg-gray-50 text-left font-bold leading-4 tracking-wider">
                   Precios por Localidad
                 </th>
-                <th className="px-6 py-3 border-b-2 border-gray-300 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
+                <th className="px-6 py-3 border-b-2 border-gray-300 bg-gray-50 text-left font-bold leading-4 tracking-wider">
                   Acciones
                 </th>
               </tr>
