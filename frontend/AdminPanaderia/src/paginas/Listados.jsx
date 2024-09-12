@@ -17,9 +17,10 @@ const Listados = () => {
           Volver
         </Link>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-10 px-6">
+      {/*       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-10 px-6"> */}
+      <div className="flex flex-wrap gap-6 ml-4 justify-center">
         <Link to="/ListadoVueltas">
-          <button className="bg-black/60 hover:bg-black border-2 border-black w-80 h-12 rounded-md uppercase text-white font-semibold transition duration-300 shadow-lg">
+          <button className=" bg-black/60 hover:bg-black border-2 border-black w-80 h-12 rounded-md uppercase text-white font-semibold transition duration-300 shadow-lg">
             Listado Vueltas
           </button>
         </Link>
