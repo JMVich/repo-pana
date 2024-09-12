@@ -120,25 +120,25 @@ const ListadoDeArticulos = () => {
       <table className="w-full border-collapse">
         <thead>
           <tr className="bg-gray-200">
-            <th className="px-6 py-3 border-b-2 border-gray-300 bg-gray-50 font-bold leading-4 tracking-wider">
+            <th className="px-6 py-3 font-bold leading-4 tracking-wider">
               Código
             </th>
-            <th className="px-6 py-3 border-b-2 border-gray-300 bg-gray-50 font-bold leading-4 tracking-wider">
+            <th className="px-6 py-3 font-bold leading-4 tracking-wider">
               Nombre
             </th>
-            <th className="px-6 py-3 border-b-2 border-gray-300 bg-gray-50 font-bold leading-4 tracking-wider">
+            <th className="px-6 py-3 font-bold leading-4 tracking-wider">
               Unidad
             </th>
-            <th className="px-6 py-3 border-b-2 border-gray-300 bg-gray-50 font-bold leading-4 tracking-wider">
+            <th className="px-6 py-3 font-bold leading-4 tracking-wider">
               Precio Mostrador
             </th>
-            <th className="px-6 py-3 border-b-2 border-gray-300 bg-gray-50 font-bold leading-4 tracking-wider">
+            <th className="px-6 py-3 font-bold leading-4 tracking-wider">
               Lugar Preparación
             </th>
-            <th className="px-6 py-3 border-b-2 border-gray-300 bg-gray-50 font-bold leading-4 tracking-wider">
+            <th className="px-6 py-3 font-bold leading-4 tracking-wider">
               Precios por Localidad
             </th>
-            <th className="px-6 py-3 border-b-2 border-gray-300 bg-gray-50 font-bold leading-4 tracking-wider">
+            <th className="px-6 py-3 font-bold leading-4 tracking-wider">
               Acciones
             </th>
           </tr>

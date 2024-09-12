@@ -89,32 +89,32 @@ const RepartoTabla = () => {
           </Link>
         </div>
 {/*         <h1 className="text-3xl font-bold mb-6">Pedidos</h1> */}
-        <table className="min-w-full bg-white border-collapse">
+        <table className="w-full border-collapse">
           <thead>
-            <tr>
-              <th className="w-40 border border-gray-400 py-2">
+            <tr className="bg-gray-200">
+              <th className="px-2 py-2 text-center border">
                 Nro de Reparto
               </th>
-              <th className="border border-gray-400 px-4 py-2">Fecha</th>
-              <th className="border border-gray-400 px-4 py-2">Repartidor</th>
-              <th className="border border-gray-400 px-4 py-2">Acciones</th>
+              <th className="px-2 py-2 text-center border">Fecha</th>
+              <th className="px-2 py-2 text-center border">Repartidor</th>
+              <th className="px-2 py-2 text-center border">Acciones</th>
             </tr>
           </thead>
           <tbody>
             {Object.keys(pedidosPorFecha).map((fecha) =>
               currentPedidos(fecha).map((pedido) => (
-                <tr key={pedido._id} className="bg-gray-100">
-                  <td className="border border-gray-400 px-4 py-2">
+                <tr key={pedido._id} className="bg-white even:bg-gray-100">
+                  <td className="border px-4 py-2">
                     {pedido.numeroPedido || "N/A"}
                   </td>
-                  <td className="border border-gray-400 px-4 py-2">
+                  <td className="border px-4 py-2">
                     {new Date(pedido.fecha).toLocaleDateString() ||
                       "Fecha Inválida"}
                   </td>
-                  <td className="border border-gray-400 px-4 py-2">
+                  <td className="border px-4 py-2">
                     {pedido.alias}
                   </td>
-                  <td className="border border-gray-400 px-4 py-2">
+                  <td className="border px-4 py-2">
                     <button
                       onClick={() => handleVerDetalles(pedido)}
                       className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
