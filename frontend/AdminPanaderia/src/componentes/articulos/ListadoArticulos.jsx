@@ -93,8 +93,8 @@ const ListadoDeArticulos = () => {
 
   return (
     <>
-      <div className="container w-full mx-auto">
-        <div className="flex justify-between mb-6">
+      <div className="flex flex-col text-center min-h-screen bg-[url('./assets/Panadera.jpg')] bg-center bg-no-repeat bg-cover bg-opacity-40">
+        <div className="flex justify-between my-4 mx-4">
           <Link to="/">
             <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
               Volver
@@ -102,7 +102,7 @@ const ListadoDeArticulos = () => {
           </Link>
           <button
             onClick={() => handleOpenPopup()}
-            className="bg-green-500 text-white px-4 py-2 rounded my-2 hover:bg-green-700"
+            className="bg-green-500 text-white px-4 py-2 rounded  hover:bg-green-700"
           >
             Nuevo Artículo
           </button>

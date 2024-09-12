@@ -74,8 +74,8 @@ const RepartoTabla = () => {
 
   return (
     <>
-      <div className="container mx-auto p-4 text-center">
-        <div className="flex justify-between items-center mb-4">
+      <div className="flex flex-col text-center min-h-screen bg-[url('./assets/Panadera.jpg')] bg-center bg-no-repeat bg-cover bg-opacity-40">
+        <div className="flex justify-between my-4 mx-4">
           <Link
             to="/"
             className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
@@ -88,8 +88,8 @@ const RepartoTabla = () => {
             </button>
           </Link>
         </div>
-        <h1 className="text-3xl font-bold mb-6">Pedidos</h1>
-        <table className="w-full border-collapse">
+{/*         <h1 className="text-3xl font-bold mb-6">Pedidos</h1> */}
+        <table className="min-w-full bg-white border-collapse">
           <thead>
             <tr>
               <th className="w-40 border border-gray-400 py-2">

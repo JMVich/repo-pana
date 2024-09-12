@@ -9,7 +9,7 @@ const Articulos = () => {
           SISTEMA DE GESTIÓN DE PANIFICADORAS
         </p>
       </div>
-      <div className=" rounded-lg">
+      <div className="rounded-lg">
         <ListadoDeArticulos />
       </div>
     </div>
