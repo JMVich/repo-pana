@@ -3,13 +3,13 @@ import ListadoDeArticulos from "../componentes/articulos/ListadoArticulos";
 
 const Articulos = () => {
   return (
-    <div className="">
-      <div className="bg-black py-5">
+    <div className="bg-[url('./assets/Panadera.jpg')] bg-center bg-no-repeat bg-cover bg-opacity-40">
+      <div className="bg-black/60 py-5">
         <p className="text-white uppercase text-center text-3xl">
-          Panadería Teodelina
+          Sistema de gestión de panificadoras
         </p>
       </div>
-      <div className="bg-white rounded-lg">
+      <div className=" rounded-lg">
         <ListadoDeArticulos />
       </div>
     </div>

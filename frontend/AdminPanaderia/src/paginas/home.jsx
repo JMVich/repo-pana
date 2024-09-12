@@ -7,7 +7,6 @@ import { FaTruckMoving } from "react-icons/fa";
 import { GrUserWorker } from "react-icons/gr";
 import { FaCity } from "react-icons/fa";
 import { IoIosPaper } from "react-icons/io";
-import Panadero from "../assets/Panadero.jpg"
 
 
 const Home = () => {
