@@ -74,8 +74,8 @@ const RepartoTabla = () => {
 
   return (
     <>
-      <div className="container mx-auto p-4 text-center">
-        <div className="flex justify-between items-center mb-4">
+      <div className="flex flex-col text-center min-h-screen bg-[url('./assets/Panadera.jpg')] bg-center bg-no-repeat bg-cover bg-opacity-40">
+        <div className="flex justify-between my-4 mx-4">
           <Link
             to="/"
             className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
@@ -88,33 +88,36 @@ const RepartoTabla = () => {
             </button>
           </Link>
         </div>
-        <h1 className="text-3xl font-bold mb-6">Pedidos</h1>
+        {/*         <h1 className="text-3xl font-bold mb-6">Pedidos</h1> */}
+        <h1 className="text-center text-white font-bold mb-4 text-2xl [text-shadow:_0px_0px_10px_#000000]">REPARTOS</h1>
+
+
         <table className="w-full border-collapse">
           <thead>
-            <tr>
-              <th className="w-40 border border-gray-400 py-2">
+            <tr className="bg-gray-200">
+              <th className="px-2 py-2 text-center border">
                 Nro de Reparto
               </th>
-              <th className="border border-gray-400 px-4 py-2">Fecha</th>
-              <th className="border border-gray-400 px-4 py-2">Repartidor</th>
-              <th className="border border-gray-400 px-4 py-2">Acciones</th>
+              <th className="px-2 py-2 text-center border">Fecha</th>
+              <th className="px-2 py-2 text-center border">Repartidor</th>
+              <th className="px-2 py-2 text-center border">Acciones</th>
             </tr>
           </thead>
           <tbody>
             {Object.keys(pedidosPorFecha).map((fecha) =>
               currentPedidos(fecha).map((pedido) => (
-                <tr key={pedido._id} className="bg-gray-100">
-                  <td className="border border-gray-400 px-4 py-2">
+                <tr key={pedido._id} className="bg-white even:bg-gray-100">
+                  <td className="border px-4 py-2">
                     {pedido.numeroPedido || "N/A"}
                   </td>
-                  <td className="border border-gray-400 px-4 py-2">
+                  <td className="border px-4 py-2">
                     {new Date(pedido.fecha).toLocaleDateString() ||
                       "Fecha Inválida"}
                   </td>
-                  <td className="border border-gray-400 px-4 py-2">
+                  <td className="border px-4 py-2">
                     {pedido.alias}
                   </td>
-                  <td className="border border-gray-400 px-4 py-2">
+                  <td className="border px-4 py-2">
                     <button
                       onClick={() => handleVerDetalles(pedido)}
                       className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
@@ -149,11 +152,10 @@ const RepartoTabla = () => {
                 <li key={number + 1}>
                   <button
                     onClick={() => paginate(number + 1)}
-                    className={`py-2 px-3 leading-tight ${
-                      currentPage === number + 1
+                    className={`py-2 px-3 leading-tight ${currentPage === number + 1
                         ? "bg-blue-500 text-white"
                         : "bg-white text-blue-500 border border-gray-300 hover:bg-gray-100"
-                    }`}
+                      }`}
                   >
                     {number + 1}
                   </button>

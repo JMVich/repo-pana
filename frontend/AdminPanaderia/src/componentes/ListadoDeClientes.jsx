@@ -96,6 +96,8 @@ const ListadoDeClientes = () => {
           onClose={handleClosePopup}
         />
       </PopupCliente>
+      
+      <h1 className="text-center text-white font-bold mb-4 text-2xl [text-shadow:_0px_0px_10px_#000000]">CLIENTES</h1>
 
       <table className="w-full border-collapse">
         <thead>
@@ -128,7 +130,7 @@ const ListadoDeClientes = () => {
               <td className="px-5 py-2 text-center border">
                 {cliente.direccion || "Dirección no disponible"}
               </td>
-              <td className="flex justify-center space-x-2">
+              <td className="flex justify-center space-x-2 mt-2">
                 <button
                   onClick={() => handleOpenPopup(cliente)}
                   className="bg-blue-500 text-white px-2 py-1 rounded hover:bg-blue-700 flex items-center"
