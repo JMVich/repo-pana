@@ -117,6 +117,10 @@ const ListadoDeArticulos = () => {
           />
         </PopupArticulo>
       )}
+
+      <h1 className="text-center text-white font-bold mb-4 text-2xl [text-shadow:_0px_0px_10px_#000000]">ARTÍCULOS</h1>
+
+
       <table className="w-full border-collapse">
         <thead>
           <tr className="bg-gray-200">

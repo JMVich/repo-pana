@@ -179,6 +179,8 @@ const ListaLocalidades = () => {
         </div>
       )}
 
+      <h1 className="text-center text-white font-bold mb-4 text-2xl [text-shadow:_0px_0px_10px_#000000]">LOCALIDADES</h1>
+
       {/* Tabla de repartidores */}
       <table className="w-full border-collapse">
         <thead>

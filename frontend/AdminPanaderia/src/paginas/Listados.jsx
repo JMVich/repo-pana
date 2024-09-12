@@ -18,6 +18,9 @@ const Listados = () => {
         </Link>
       </div>
       {/*       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-10 px-6"> */}
+
+      <h1 className="text-center text-white font-bold mb-4 text-2xl [text-shadow:_0px_0px_10px_#000000]">LISTADOS</h1>
+
       <div className="flex flex-wrap gap-6 ml-4 justify-center">
         <Link to="/ListadoVueltas">
           <button className=" bg-black/60 hover:bg-black border-2 border-black w-80 h-12 rounded-md uppercase text-white font-semibold transition duration-300 shadow-lg">

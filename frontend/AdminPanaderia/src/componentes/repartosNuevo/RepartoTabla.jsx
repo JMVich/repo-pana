@@ -88,7 +88,10 @@ const RepartoTabla = () => {
             </button>
           </Link>
         </div>
-{/*         <h1 className="text-3xl font-bold mb-6">Pedidos</h1> */}
+        {/*         <h1 className="text-3xl font-bold mb-6">Pedidos</h1> */}
+        <h1 className="text-center text-white font-bold mb-4 text-2xl [text-shadow:_0px_0px_10px_#000000]">REPARTOS</h1>
+
+
         <table className="w-full border-collapse">
           <thead>
             <tr className="bg-gray-200">
@@ -149,11 +152,10 @@ const RepartoTabla = () => {
                 <li key={number + 1}>
                   <button
                     onClick={() => paginate(number + 1)}
-                    className={`py-2 px-3 leading-tight ${
-                      currentPage === number + 1
+                    className={`py-2 px-3 leading-tight ${currentPage === number + 1
                         ? "bg-blue-500 text-white"
                         : "bg-white text-blue-500 border border-gray-300 hover:bg-gray-100"
-                    }`}
+                      }`}
                   >
                     {number + 1}
                   </button>
