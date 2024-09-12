@@ -93,128 +93,127 @@ const ListadoDeArticulos = () => {
 
   return (
     <>
-      <div className="flex flex-col text-center min-h-screen bg-[url('./assets/Panadera.jpg')] bg-center bg-no-repeat bg-cover bg-opacity-40">
-        <div className="flex justify-between my-4 mx-4">
-          <Link to="/">
-            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-              Volver
-            </button>
+      <div className="flex mb-4">
+        <div className="flex space-x-4">
+          <Link to="/"
+            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4 ml-4"
+          >
+            Volver
           </Link>
           <button
             onClick={() => handleOpenPopup()}
-            className="bg-green-500 text-white px-4 py-2 rounded  hover:bg-green-700"
+            className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded absolute right-4 mt-4"
           >
             Nuevo Artículo
           </button>
         </div>
-        {isPopupOpen && (
-          <PopupArticulo onClose={handleClosePopup}>
-            <FormularioArticulos
-              articulo={selectedArticulo}
-              onSubmit={handleFormSubmit}
-              onClose={handleClosePopup}
-            />
-          </PopupArticulo>
-        )}
-        <div className="overflow-x-auto">
-          <table className="min-w-full bg-white border-collapse">
-            <thead>
-              <tr>
-                <th className="px-6 py-3 border-b-2 border-gray-300 bg-gray-50 text-left font-bold leading-4 tracking-wider">
-                  Código
-                </th>
-                <th className="px-6 py-3 border-b-2 border-gray-300 bg-gray-50 text-left font-bold leading-4 tracking-wider">
-                  Nombre
-                </th>
-                <th className="px-6 py-3 border-b-2 border-gray-300 bg-gray-50 text-left font-bold leading-4 tracking-wider">
-                  Unidad
-                </th>
-                <th className="px-6 py-3 border-b-2 border-gray-300 bg-gray-50 text-left font-bold leading-4 tracking-wider">
-                  Precio Mostrador
-                </th>
-                <th className="px-6 py-3 border-b-2 border-gray-300 bg-gray-50 text-left font-bold leading-4 tracking-wider">
-                  Lugar Preparación
-                </th>
-                <th className="px-6 py-3 border-b-2 border-gray-300 bg-gray-50 text-left font-bold leading-4 tracking-wider">
-                  Precios por Localidad
-                </th>
-                <th className="px-6 py-3 border-b-2 border-gray-300 bg-gray-50 text-left font-bold leading-4 tracking-wider">
-                  Acciones
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              {articulos.map((articulo) => (
-                <tr key={articulo._id}>
-                  <td className="px-6  whitespace-no-wrap border-b border-gray-200">
-                    {articulo.codigo}
-                  </td>
-                  <td className="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
-                    {articulo.nombre}
-                  </td>
-                  <td className="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
-                    {articulo.unidad}
-                  </td>
-                  <td className="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
-                    {articulo.precioMostrador}
-                  </td>
-                  <td className="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
-                    {articulo.lugarPreparacion}
-                  </td>
-                  <td className="px-6  whitespace-no-wrap border-b border-gray-200">
-                    {articulo.precios && articulo.precios.length > 0 ? (
-                      articulo.precios.map((precio) => (
-                        <div key={precio.localidad._id}>
-                          {precio.localidad.nombre}: {precio.precio}
-                        </div>
-                      ))
-                    ) : (
-                      <div>No hay precios disponibles</div>
-                    )}
-                  </td>
-                  <td className="flex justify-center space-x-2">
-                    <button
-                      onClick={() => handleOpenPopup(articulo)}
-                      className="bg-blue-500 text-white px-2 py-1 rounded hover:bg-blue-700 flex items-center"
-                    >
-                      <FontAwesomeIcon icon={faEdit} className="mr-1" />
-                    </button>
-                    <button
-                      onClick={() => handleClickEliminar(articulo._id)}
-                      className="bg-red-500 text-white px-2 py-1 rounded hover:bg-red-700 flex items-center"
-                    >
-                      <FontAwesomeIcon icon={faTrash} className="mr-1" />
-                    </button>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-        {showWarning && (
-          <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
-            <div className="bg-white p-4 rounded shadow-md text-center">
-              <p className="mb-4">
-                ¿Estás seguro de que deseas eliminar este artículo?
-              </p>
-              <div className="flex justify-center space-x-4">
+      </div>
+      {isPopupOpen && (
+        <PopupArticulo onClose={handleClosePopup}>
+          <FormularioArticulos
+            articulo={selectedArticulo}
+            onSubmit={handleFormSubmit}
+            onClose={handleClosePopup}
+          />
+        </PopupArticulo>
+      )}
+      <table className="w-full border-collapse">
+        <thead>
+          <tr className="bg-gray-200">
+            <th className="px-6 py-3 border-b-2 border-gray-300 bg-gray-50 font-bold leading-4 tracking-wider">
+              Código
+            </th>
+            <th className="px-6 py-3 border-b-2 border-gray-300 bg-gray-50 font-bold leading-4 tracking-wider">
+              Nombre
+            </th>
+            <th className="px-6 py-3 border-b-2 border-gray-300 bg-gray-50 font-bold leading-4 tracking-wider">
+              Unidad
+            </th>
+            <th className="px-6 py-3 border-b-2 border-gray-300 bg-gray-50 font-bold leading-4 tracking-wider">
+              Precio Mostrador
+            </th>
+            <th className="px-6 py-3 border-b-2 border-gray-300 bg-gray-50 font-bold leading-4 tracking-wider">
+              Lugar Preparación
+            </th>
+            <th className="px-6 py-3 border-b-2 border-gray-300 bg-gray-50 font-bold leading-4 tracking-wider">
+              Precios por Localidad
+            </th>
+            <th className="px-6 py-3 border-b-2 border-gray-300 bg-gray-50 font-bold leading-4 tracking-wider">
+              Acciones
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          {articulos.map((articulo) => (
+            <tr key={articulo._id} className="bg-white even:bg-gray-100">
+              <td className="px-5 py-2 text-center border text-black">
+                {articulo.codigo}
+              </td>
+              <td className="px-5 py-2 text-center border text-black">
+                {articulo.nombre}
+              </td>
+              <td className="px-5 py-2 text-center border text-black">
+                {articulo.unidad}
+              </td>
+              <td className="px-5 py-2 text-center border text-black">
+                {articulo.precioMostrador}
+              </td>
+              <td className="px-5 py-2 text-center border text-black">
+                {articulo.lugarPreparacion}
+              </td>
+              <td className="px-5 py-2 text-center border text-black">
+                {articulo.precios && articulo.precios.length > 0 ? (
+                  articulo.precios.map((precio) => (
+                    <div key={precio.localidad._id}>
+                      {precio.localidad.nombre}: {precio.precio}
+                    </div>
+                  ))
+                ) : (
+                  <div>No hay precios disponibles</div>
+                )}
+              </td>
+              <td className="flex justify-center space-x-2 mt-5">
                 <button
-                  onClick={confirmEliminar}
-                  className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-700"
+                  onClick={() => handleOpenPopup(articulo)}
+                  className="bg-blue-500 text-white px-2 py-1 rounded hover:bg-blue-700 flex items-center"
                 >
-                  Sí
+                  <FontAwesomeIcon icon={faEdit} className="mr-1" />
                 </button>
                 <button
-                  onClick={cancelEliminar}
-                  className="bg-gray-300 text-black px-4 py-2 rounded hover:bg-gray-400"
+                  onClick={() => handleClickEliminar(articulo._id)}
+                  className="bg-red-500 text-white px-2 py-1 rounded hover:bg-red-700 flex items-center"
                 >
-                  No
+                  <FontAwesomeIcon icon={faTrash} className="mr-1" />
                 </button>
-              </div>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+
+      {showWarning && (
+        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
+          <div className="bg-white p-4 rounded shadow-md text-center">
+            <p className="mb-4">
+              ¿Estás seguro de que deseas eliminar este artículo?
+            </p>
+            <div className="flex justify-center space-x-4">
+              <button
+                onClick={confirmEliminar}
+                className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-700"
+              >
+                Sí
+              </button>
+              <button
+                onClick={cancelEliminar}
+                className="bg-gray-300 text-black px-4 py-2 rounded hover:bg-gray-400"
+              >
+                No
+              </button>
             </div>
           </div>
-        )}
-      </div>
+        </div>
+      )}
     </>
   );
 };

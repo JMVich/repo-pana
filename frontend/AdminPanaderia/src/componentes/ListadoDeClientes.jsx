@@ -128,7 +128,7 @@ const ListadoDeClientes = () => {
               <td className="px-5 py-2 text-center border">
                 {cliente.direccion || "Dirección no disponible"}
               </td>
-              <td className="flex justify-center space-x-2">
+              <td className="flex justify-center space-x-2 mt-2">
                 <button
                   onClick={() => handleOpenPopup(cliente)}
                   className="bg-blue-500 text-white px-2 py-1 rounded hover:bg-blue-700 flex items-center"
