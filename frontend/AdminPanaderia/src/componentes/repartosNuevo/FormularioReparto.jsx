@@ -257,7 +257,7 @@ const ListaClientes = () => {
             // Obtener la cantidad editada del estado
             const cantidadEditada =
               cantidadesEditadas[String(clienteId)]?.[
-                String(articulo.articuloId._id)
+              String(articulo.articuloId._id)
               ] || 0;
 
             // La cantidad por defecto para el artículo y el día seleccionado
@@ -466,10 +466,10 @@ const ListaClientes = () => {
 
   return (
     <div
-      className="container mx-auto p-6 bg-white rounded-md shadow-md"
+      className="container mt-20 mx-auto p-6 rounded-md shadow-[0px_11px_25px_8px_#cbd5e0] border-2 border-gray-300"
       id="reparto-details"
     >
-      <h1 className="text-3xl font-bold mb-6 text-center">Lista de Clientes</h1>
+      <h1 className="text-3xl font-bold mb-6 text-center">Lista de clientes</h1>
       <div className="flex justify-between mb-6">
         <Link to="/RepartosNuevo">
           <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
@@ -563,7 +563,7 @@ const ListaClientes = () => {
 
                 <div className="flex flex-wrap gap-4">
                   {Array.isArray(cliente.articulos) &&
-                  cliente.articulos.length > 0 ? (
+                    cliente.articulos.length > 0 ? (
                     cliente.articulos.map((articulo) => {
                       const articuloNombre =
                         articulo.articuloId?.nombre || articulo.nombre;
@@ -586,7 +586,7 @@ const ListaClientes = () => {
                       // Obtener la cantidad editada si existe
                       const cantidadEditada =
                         cantidadesEditadas[cliente._id]?.[
-                          articulo.articuloId._id
+                        articulo.articuloId._id
                         ] || 0;
 
                       // Cantidad final que se muestra en el input
@@ -691,7 +691,7 @@ const ListaClientes = () => {
             type="submit"
             className="bg-indigo-600 hover:bg-indigo-800 text-white font-bold py-2 px-6 rounded"
           >
-            Guardar Reparto
+            Guardar reparto
           </button>
         </div>
       </form>
@@ -705,7 +705,7 @@ const ListaClientes = () => {
       >
         <div className="bg-white rounded-lg shadow-lg p-6 w-full max-w-md">
           <h2 className="text-2xl font-semibold mb-4">
-            Seleccionar Artículo Adicional
+            Seleccionar artículo adicional
           </h2>
           <div className="space-y-4">
             {articulos
@@ -744,7 +744,7 @@ const ListaClientes = () => {
               onClick={handleAddArticuloAdicional}
               className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
             >
-              Agregar Artículo
+              Agregar artículo
             </button>
             <button
               onClick={closeModal}
