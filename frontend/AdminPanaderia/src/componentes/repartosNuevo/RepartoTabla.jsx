@@ -3,6 +3,8 @@ import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import useRepartos from "../../hook/useRepartos";
 import "react-datepicker/dist/react-datepicker.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTrash, faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
 const RepartoTabla = () => {
   const [pedidosPorFecha, setPedidosPorFecha] = useState({});
@@ -84,7 +86,7 @@ const RepartoTabla = () => {
           </Link>
           <Link to="/crear-reparto">
             <button className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
-              +
+              Crear reparto
             </button>
           </Link>
         </div>
@@ -117,18 +119,18 @@ const RepartoTabla = () => {
                   <td className="border px-4 py-2">
                     {pedido.alias}
                   </td>
-                  <td className="border px-4 py-2">
+                  <td className="px-5 py-2 text-center border text-black">
                     <button
                       onClick={() => handleVerDetalles(pedido)}
-                      className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
+                      className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded mr-2 font-bold"
                     >
-                      Ver Detalles
+                      <FontAwesomeIcon icon={faMagnifyingGlass} />
                     </button>
                     <button
                       onClick={() => handleEliminarReparto(pedido._id)}
-                      className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded ml-2"
+                      className="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded font-bold"
                     >
-                      Eliminar
+                      <FontAwesomeIcon icon={faTrash} />
                     </button>
                   </td>
                 </tr>
@@ -153,8 +155,8 @@ const RepartoTabla = () => {
                   <button
                     onClick={() => paginate(number + 1)}
                     className={`py-2 px-3 leading-tight ${currentPage === number + 1
-                        ? "bg-blue-500 text-white"
-                        : "bg-white text-blue-500 border border-gray-300 hover:bg-gray-100"
+                      ? "bg-blue-500 text-white"
+                      : "bg-white text-blue-500 border border-gray-300 hover:bg-gray-100"
                       }`}
                   >
                     {number + 1}

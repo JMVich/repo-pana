@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEdit, faTrash } from "@fortawesome/free-solid-svg-icons";
 
 const ListaRepartidores = () => {
   const [repartidores, setRepartidores] = useState([]);
@@ -117,7 +119,7 @@ const ListaRepartidores = () => {
             className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded absolute right-4 mt-4"
             onClick={() => setShowModal(true)}
           >
-            Crear Repartidor
+            Crear repartidor
           </button>
         </div>
       </div >
@@ -219,19 +221,19 @@ const ListaRepartidores = () => {
                 </td>
                 <td className="px-5 py-2 text-center border text-black">
                   <button
-                    className="bg-yellow-500 text-white px-4 py-2 rounded mr-2 font-bold"
+                    className="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded mr-2 font-bold"
                     onClick={() => handleEditRepartidor(repartidor)}
                   >
-                    Editar
+                    <FontAwesomeIcon icon={faEdit} />
                   </button>
                   <button
-                    className="bg-red-500 text-white px-4 py-2 rounded font-bold"
+                    className="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded font-bold"
                     onClick={() => {
                       setDeleteId(repartidor._id);
                       setShowDeleteConfirm(true);
                     }}
                   >
-                    Eliminar
+                    <FontAwesomeIcon icon={faTrash} />
                   </button>
                 </td>
               </tr>
