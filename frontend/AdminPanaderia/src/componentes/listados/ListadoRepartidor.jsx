@@ -101,7 +101,7 @@ const ListadoRepartidor = () => {
   };
 
   return (
-    <div className="container mx-auto p-6 bg-white rounded-md shadow-md">
+    <div className="container mt-20 mx-auto mb-10 p-6 rounded-md shadow-[0px_11px_25px_8px_#cbd5e0] border-2 border-gray-300">
       <Link
         to="/Listados"
         className="mt-4 inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
@@ -109,7 +109,7 @@ const ListadoRepartidor = () => {
         Volver
       </Link>
       <h1 className="text-3xl font-bold mb-6 text-center">
-        Repartos por Fecha con Detalles
+        Repartos por fecha con detalles
       </h1>
       <div className="flex justify-center mb-6">
         <DatePicker

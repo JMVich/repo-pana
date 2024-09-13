@@ -76,7 +76,7 @@ const RepartoTabla = () => {
 
   return (
     <>
-      <div className="flex flex-col text-center min-h-screen bg-[url('./assets/Panadera.jpg')] bg-center bg-no-repeat bg-cover bg-opacity-40">
+      <div className="flex flex-col text-center min-h-screen">
         <div className="flex justify-between my-4 mx-4">
           <Link
             to="/"
