@@ -117,7 +117,7 @@ const ListaRepartidores = () => {
             className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded absolute right-4 mt-4"
             onClick={() => setShowModal(true)}
           >
-            Crear Repartidor
+            Crear repartidor
           </button>
         </div>
       </div >

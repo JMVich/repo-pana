@@ -84,7 +84,7 @@ const RepartoTabla = () => {
           </Link>
           <Link to="/crear-reparto">
             <button className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
-              +
+              Crear reparto
             </button>
           </Link>
         </div>
