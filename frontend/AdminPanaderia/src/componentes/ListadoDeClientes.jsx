@@ -102,7 +102,7 @@ const ListadoDeClientes = () => {
       <table className="w-full border-collapse">
         <thead>
           <tr className="bg-gray-200">
-            <th className="px-2 py-2 text-center border">Cod</th>
+            <th className="px-2 py-2 text-center border">Código</th>
             <th className="px-2 py-2 text-center border">Nombre</th>
             <th className="px-2 py-2 text-center border">Apellido</th>
             <th className="px-2 py-2 text-center border">Localidad</th>

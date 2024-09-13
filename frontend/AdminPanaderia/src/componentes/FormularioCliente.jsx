@@ -90,18 +90,18 @@ const FormularioCliente = ({ onClose }) => {
         setProductos((prevProductos) =>
           prevProductos.length === 0
             ? data.map((producto) => ({
-                ...producto,
-                articuloId: producto._id,
-                cantidad: {
-                  lunes: 0,
-                  martes: 0,
-                  miercoles: 0,
-                  jueves: 0,
-                  viernes: 0,
-                  sabado: 0,
-                  domingo: 0,
-                },
-              }))
+              ...producto,
+              articuloId: producto._id,
+              cantidad: {
+                lunes: 0,
+                martes: 0,
+                miercoles: 0,
+                jueves: 0,
+                viernes: 0,
+                sabado: 0,
+                domingo: 0,
+              },
+            }))
             : prevProductos
         );
       } catch (error) {
@@ -235,12 +235,12 @@ const FormularioCliente = ({ onClose }) => {
       prevProductos.map((producto) =>
         producto._id === productoId
           ? {
-              ...producto,
-              cantidad: {
-                ...producto.cantidad,
-                [dia]: parseInt(value) || 0,
-              },
-            }
+            ...producto,
+            cantidad: {
+              ...producto.cantidad,
+              [dia]: parseInt(value) || 0,
+            },
+          }
           : producto
       )
     );
@@ -248,13 +248,16 @@ const FormularioCliente = ({ onClose }) => {
 
   return (
     <>
-      <p className="text-lg text-center mb-10">
-        {id ? "Editar Cliente" : "Agregar Cliente"}
-      </p>
+
+
+
       <form
-        className="p-3 bg-white rounded-lg shadow-md overflow-y-auto max-h-screen"
+        className="p-3 bg-white rounded-lg overflow-y-auto max-h-screen"
         onSubmit={handleSubmit}
       >
+        <h2 className="text-2xl font-semibold mb-6 col-span-full items-center">
+          {id ? "Editar cliente" : "Crear cliente"}
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div>
             <label className="uppercase text-gray-600 text-sm font-bold">
@@ -315,11 +318,11 @@ const FormularioCliente = ({ onClose }) => {
 
           <div>
             <label className="uppercase text-gray-600 text-sm font-bold">
-              Direccion
+              Dirección
             </label>
             <input
               type="text"
-              placeholder="Direccion"
+              placeholder="Dirección del cliente"
               className="border w-full h-10 bg-white rounded-lg p-2 mt-1"
               value={direccion}
               onChange={(e) => setDireccion(e.target.value)}
@@ -331,7 +334,7 @@ const FormularioCliente = ({ onClose }) => {
             </label>
             <input
               type="number"
-              placeholder="Celular"
+              placeholder="Celular del cliente"
               className="border w-full h-10 bg-white rounded-lg p-2 mt-1"
               value={celular}
               onChange={(e) => setCelular(e.target.value)}
@@ -355,7 +358,7 @@ const FormularioCliente = ({ onClose }) => {
             </label>
             <input
               type="number"
-              placeholder="Nro de Vuelta"
+              placeholder="Nro de vuelta"
               className="border w-full h-10 bg-white rounded-lg p-2 mt-1"
               value={vuelta}
               onChange={(e) => setVuelta(e.target.value)}
@@ -368,22 +371,20 @@ const FormularioCliente = ({ onClose }) => {
             <div className="flex mt-1">
               <button
                 type="button"
-                className={`w-1/2 h-10 rounded-l-lg p-2 transition-colors duration-300 ease-in-out ${
-                  tipoCliente === "lista"
-                    ? "bg-blue-500 text-white shadow-lg"
-                    : "bg-white text-gray-800 border"
-                }`}
+                className={`w-1/2 h-10 rounded-l-lg p-2 transition-colors duration-300 ease-in-out ${tipoCliente === "lista"
+                  ? "bg-blue-500 text-white shadow-lg"
+                  : "bg-white text-gray-800 border"
+                  }`}
                 onClick={() => setTipoCliente("lista")}
               >
                 Lista
               </button>
               <button
                 type="button"
-                className={`w-1/2 h-10 rounded-r-lg p-2 transition-colors duration-300 ease-in-out ${
-                  tipoCliente === "individual"
-                    ? "bg-blue-500 text-white shadow-lg"
-                    : "bg-white text-gray-800 border"
-                }`}
+                className={`w-1/2 h-10 rounded-r-lg p-2 transition-colors duration-300 ease-in-out ${tipoCliente === "individual"
+                  ? "bg-blue-500 text-white shadow-lg"
+                  : "bg-white text-gray-800 border"
+                  }`}
                 onClick={() => setTipoCliente("individual")}
               >
                 Individual
@@ -468,8 +469,8 @@ const FormularioCliente = ({ onClose }) => {
         <div className="flex justify-end mt-5">
           <input
             type="submit"
-            value={id ? "Guardar cambios" : "Registrar cliente"}
-            className="bg-indigo-700 w-40 py-3 rounded-lg text-white uppercase font-bold hover:cursor-pointer hover:bg-indigo-800"
+            value={id ? "Guardar cambios" : "Crear cliente"}
+            className="bg-indigo-700 w-40 py-3 rounded-lg text-white font-bold hover:cursor-pointer hover:bg-indigo-800"
           />
           <button
             onClick={onClose}

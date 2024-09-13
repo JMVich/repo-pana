@@ -222,12 +222,12 @@ const RepartoDetalles = ({}) => {
     <div className="container mx-auto" id="reparto-details">
       <Link
         to="/RepartosNuevo"
-        className="mt-4 inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+        className="my-4 inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
       >
         Volver
       </Link>
-      <h1 className="text-2xl font-bold mb-4">
-        Detalles del Reparto N°: {numeroPedido}
+      <h1 className="text-2xl font-bold mb-4 mt-16">
+        Detalles del reparto N°: {numeroPedido}
       </h1>
       {error && <div className="text-red-600">{error}</div>}
       {loading ? (
@@ -238,9 +238,9 @@ const RepartoDetalles = ({}) => {
             {clientesArticulos.map((clienteArticulo) => (
               <div
                 key={clienteArticulo._id}
-                className="border px-3 rounded-md shadow-md"
+                className="border px-3 rounded-md shadow-md my-8"
               >
-                <div className="flex justify-between mb-2">
+                <div className="flex justify-between my-3">
                   <h2 className="text-xl font-semibold">
                     {clienteArticulo.clienteId.nombre}{" "}
                     {clienteArticulo.clienteId.apellido}
@@ -258,11 +258,11 @@ const RepartoDetalles = ({}) => {
                           )
                         }
                       />
-                      <span className="ml-2">Pagado Completo</span>
+                      <span className="ml-2">Pagado completo</span>
                     </label>
                     {!clienteArticulo.pagadoCompleto && (
                       <label className="flex items-center">
-                        Monto Pagado:
+                        Monto pagado:
                         <input
                           type="number"
                           value={clienteArticulo.montoPagado || ""}
@@ -291,7 +291,7 @@ const RepartoDetalles = ({}) => {
                         <div className="text-gray-700">
                           ${(articulo.importe || 0).toFixed(2)}
                         </div>
-                        <div className="flex items-center mt-1">
+                        <div className="flex items-center my-4">
                           <h2 className="mr-2">Devuelve:</h2>
                           <input
                             type="number"
@@ -318,7 +318,7 @@ const RepartoDetalles = ({}) => {
                           />
                         </div>
                         <div className="text-gray-700">
-                          Importe Actual: ${(articulo.importe || 0).toFixed(2)}
+                          Importe actual: ${(articulo.importe || 0).toFixed(2)}
                         </div>
                       </div>
                     ))}
@@ -341,7 +341,7 @@ const RepartoDetalles = ({}) => {
                     </div>
                     <div className="flex space-x-4 mt-1">
                       <div className="text-right text-lg font-semibold">
-                        Importe Total: $
+                        Importe total: $
                         {(clienteArticulo.totalCliente || 0).toFixed(2)}
                       </div>
                       <div className="text-right text-lg font-semibold text-red-600">
@@ -359,8 +359,8 @@ const RepartoDetalles = ({}) => {
               </div>
             ))}
           </div>
-          <div className="mt-4 text-xl font-semibold">
-            Importe Total del Reparto: $
+          <div className="my-6 text-xl font-semibold">
+            Importe total del reparto: $
             {calcularImporteTotalReparto().toFixed(2)}
           </div>
           <div className="mt-4 flex space-x-4">
@@ -368,7 +368,7 @@ const RepartoDetalles = ({}) => {
               onClick={handleGuardarCambios}
               className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
             >
-              Guardar Cambios
+              Guardar cambios
             </button>
           </div>
         </>

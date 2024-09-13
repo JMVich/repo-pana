@@ -75,10 +75,10 @@ const FormularioArticulos = ({ articulo, onSubmit, onClose }) => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="h-auto mx-auto p-8 bg-white shadow-lg rounded-lg grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+      className="h-auto mx-auto p-8 bg-white rounded-lg grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
     >
       <h2 className="text-2xl font-semibold mb-6 col-span-full">
-        Formulario de Artículos
+        {nombre ? "Editar artículo" : "Crear artículo"}
       </h2>
 
       <div className="mb-4">
@@ -100,7 +100,7 @@ const FormularioArticulos = ({ articulo, onSubmit, onClose }) => {
         />
       </div>
       <div className="mb-4">
-        <label className="block text-gray-700">Precio Mostrador</label>
+        <label className="block text-gray-700">Precio mostrador</label>
         <input
           type="number"
           value={precioMostrador}
@@ -109,7 +109,7 @@ const FormularioArticulos = ({ articulo, onSubmit, onClose }) => {
         />
       </div>
       <div className="mb-4">
-        <label className="block text-gray-700">Lugar de Preparación</label>
+        <label className="block text-gray-700">Sector de preparación</label>
         <input
           type="text"
           value={lugarPreparacion}
@@ -118,7 +118,7 @@ const FormularioArticulos = ({ articulo, onSubmit, onClose }) => {
         />
       </div>
       <div className="mb-4 col-span-full ">
-        <label className="block text-gray-700">Precios por Localidad</label>
+        <label className="block text-gray-700 mb-2">Precios por localidad</label>
         <div className="lg:grid-cols-3 grid">
           {localidades.map((localidad) => (
             <div key={localidad._id} className="mb-2 ">
@@ -138,14 +138,14 @@ const FormularioArticulos = ({ articulo, onSubmit, onClose }) => {
       <div className="flex justify-end col-span-full">
         <button
           type="submit"
-          className="px-4 py-2 bg-blue-600 text-white rounded-md mr-2"
+          className="px-4 py-2 bg-blue-600 hover:bg-blue-700 font-bold text-white rounded-md mr-2"
         >
           Guardar
         </button>
         <button
           type="button"
           onClick={onClose}
-          className="px-4 py-2 bg-red-500 text-white rounded-md"
+          className="px-4 py-2 bg-red-500 hover:bg-red-600 font-bold text-white rounded-md"
         >
           Cancelar
         </button>

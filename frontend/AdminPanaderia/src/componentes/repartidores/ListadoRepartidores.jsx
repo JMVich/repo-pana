@@ -130,15 +130,15 @@ const ListaRepartidores = () => {
           <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
             <div className="bg-white p-6 rounded shadow-md w-1/3 relative">
               <button
-                className=" bg-red-500 text-white px-4 py-2 rounded mb-6 right-6 absolute bottom-0"
+                className=" bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded mb-6 right-6 absolute bottom-0 font-bold"
                 onClick={handleCloseModal}
               >
                 Cerrar
               </button>
               <h2 className="text-xl font-bold mb-4">
                 {editingRepartidor
-                  ? "Editar Repartidor"
-                  : "Crear Nuevo Repartidor"}
+                  ? "Editar repartidor"
+                  : "Crear nuevo repartidor"}
               </h2>
               <input
                 className="border border-gray-300 rounded px-4 py-2 mb-4 w-full"
@@ -155,10 +155,10 @@ const ListaRepartidores = () => {
                 onChange={(e) => setAlias(e.target.value)}
               />
               <button
-                className="bg-green-500 text-white px-4 py-2 rounded"
+                className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded font-bold"
                 onClick={handleCrearRepartidor}
               >
-                {editingRepartidor ? "Actualizar Repartidor" : "Crear Repartidor"}
+                {editingRepartidor ? "Actualizar repartidor" : "Crear repartidor"}
               </button>
             </div>
           </div>
@@ -170,7 +170,7 @@ const ListaRepartidores = () => {
         showDeleteConfirm && (
           <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
             <div className="bg-white p-6 rounded shadow-md w-1/3 relative">
-              <h2 className="text-xl font-bold mb-4">Confirmar Eliminación</h2>
+              <h2 className="text-xl font-bold mb-4">Confirmar eliminación</h2>
               <p>¿Estás seguro de que deseas eliminar este repartidor?</p>
               <div className="flex justify-end mt-4">
                 <button

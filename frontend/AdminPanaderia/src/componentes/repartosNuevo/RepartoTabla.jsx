@@ -76,7 +76,7 @@ const RepartoTabla = () => {
 
   return (
     <>
-      <div className="flex flex-col text-center min-h-screen bg-[url('./assets/Panadera.jpg')] bg-center bg-no-repeat bg-cover bg-opacity-40">
+      <div className="flex flex-col text-center min-h-screen">
         <div className="flex justify-between my-4 mx-4">
           <Link
             to="/"
@@ -90,7 +90,7 @@ const RepartoTabla = () => {
             </button>
           </Link>
         </div>
-        {/*         <h1 className="text-3xl font-bold mb-6">Pedidos</h1> */}
+
         <h1 className="text-center text-white font-bold mb-4 text-2xl [text-shadow:_0px_0px_10px_#000000]">REPARTOS</h1>
 
 
@@ -98,7 +98,7 @@ const RepartoTabla = () => {
           <thead>
             <tr className="bg-gray-200">
               <th className="px-2 py-2 text-center border">
-                Nro de Reparto
+                Nro de reparto
               </th>
               <th className="px-2 py-2 text-center border">Fecha</th>
               <th className="px-2 py-2 text-center border">Repartidor</th>
