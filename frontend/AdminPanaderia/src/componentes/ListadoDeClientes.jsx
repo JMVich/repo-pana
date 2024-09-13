@@ -130,18 +130,18 @@ const ListadoDeClientes = () => {
               <td className="px-5 py-2 text-center border">
                 {cliente.direccion || "Dirección no disponible"}
               </td>
-              <td className="flex justify-center space-x-2 mt-2">
+              <td className="px-5 py-2 text-center border text-black">
                 <button
                   onClick={() => handleOpenPopup(cliente)}
-                  className="bg-blue-500 text-white px-2 py-1 rounded hover:bg-blue-700 flex items-center"
+                  className="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded mr-2 font-bold"
                 >
-                  <FontAwesomeIcon icon={faEdit} className="mr-1" />
+                  <FontAwesomeIcon icon={faEdit} />
                 </button>
                 <button
                   onClick={() => handleClickEliminar(cliente._id)}
-                  className="bg-red-500 text-white px-2 py-1 rounded hover:bg-red-700 flex items-center"
+                  className="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded font-bold"
                 >
-                  <FontAwesomeIcon icon={faTrash} className="mr-1" />
+                  <FontAwesomeIcon icon={faTrash} />
                 </button>
               </td>
             </tr>

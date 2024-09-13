@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEdit, faTrash } from "@fortawesome/free-solid-svg-icons";
 
 const ListaLocalidades = () => {
   const [Localidades, setLocalidades] = useState([]);
@@ -208,19 +210,19 @@ const ListaLocalidades = () => {
                 </td>
                 <td className="px-5 py-2 text-center border text-black">
                   <button
-                    className="bg-yellow-500 text-white px-4 py-2 rounded mr-2 font-bold"
+                    className="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded mr-2 font-bold"
                     onClick={() => handleEditLocalidad(localidad)}
                   >
-                    Editar
+                    <FontAwesomeIcon icon={faEdit} />
                   </button>
                   <button
-                    className="bg-red-500 text-white px-4 py-2 rounded font-bold"
+                    className="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded font-bold"
                     onClick={() => {
                       setDeleteId(localidad._id);
                       setShowDeleteConfirm(true);
                     }}
                   >
-                    Eliminar
+                    <FontAwesomeIcon icon={faTrash} />
                   </button>
                 </td>
               </tr>
