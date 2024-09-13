@@ -134,13 +134,13 @@ const ListadoDeArticulos = () => {
               Unidad
             </th>
             <th className="px-6 py-3 font-bold leading-4 tracking-wider">
-              Precio Mostrador
+              Precio mostrador
             </th>
             <th className="px-6 py-3 font-bold leading-4 tracking-wider">
-              Lugar Preparación
+              Sector preparación
             </th>
             <th className="px-6 py-3 font-bold leading-4 tracking-wider">
-              Precios por Localidad
+              Precios por localidad
             </th>
             <th className="px-6 py-3 font-bold leading-4 tracking-wider">
               Acciones
